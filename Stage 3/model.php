@@ -41,8 +41,6 @@ $rider->image = "./asset/amiibo-link-rider_2x.png";
     It is possible ton convert a standard object in an associtive array (and vice versa). Have a look to the renderAmiibo function.
 */
 $data = [$archer, $zelda, $rider];
-
-
 /*  BILAN (à lire une fois l'exercice terminé)
     
     Note : $data et son contenu correspond à un autre des formats sous lequel un serveur de base de données peut
