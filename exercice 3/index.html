@@ -56,6 +56,7 @@
         }
     }*/
    //d) bis
+   
    let imbricateSquares = function(number) {
         if (number <= 0) return;
         let div = document.body;
@@ -109,15 +110,21 @@ f) En modifiant très très peu de choses, faites en sorte d’inverser l’agra
 dire que le padding du premier carré augmente de 1, celui du second de 2... et ainsi de suite jusqu’à
 ce qu’on atteigne le carré cliqué.
 */
-
     //a)
-    multiSquares(100);
+    imbricateSquares(100);
     let handler_changeColor = function(ev){
-        let pad = parseInt(ev.target.style.padding)+30;
         ev.target.style.backgroundColor = randomColor();
-        ev.target.style.padding = pad+"px";
     }
-        document.body.addEventListener("click", handler_changeColor);
-    
+    document.body.addEventListener("click", handler_changeColor);
+
+    let count = 3
+    let handler_growPadding = function(ev){
+        count++;
+        ev.currentTarget.style.padding = count + "px";
+    }
+    let alldiv = document.querySelectorAll("div");
+    for (let div of alldiv) {
+        div.addEventListener("click", handler_growPadding, true);
+    }
 </script>
 </html>
