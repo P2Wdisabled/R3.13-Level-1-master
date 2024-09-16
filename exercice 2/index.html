@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        let page = document.body
+
+        let section = document.createElement('section')
+        section.style = "background-color: darkcyan;width:300px;padding:3%"
+
+        let div1 = document.createElement('div')
+        div1.style = 'background-color: darkseagreen;width:100px;padding:2%'
+
+        let p1 = document.createElement('p')
+        p1.textContent = 'Lorem ipsum dolor'
+
+        let div2 = document.createElement('div')
+        div2.style = 'background-color: burlywood;width:100px;padding:2%'
+
+        let p2 = document.createElement('p')
+        p2.textContent = 'sit amet consectetur'
+        
+        div1.appendChild(p1)
+        div2.appendChild(p2)
+        section.appendChild(div1)
+        section.appendChild(div2)
+        page.appendChild(section)
+</script>
+</html>

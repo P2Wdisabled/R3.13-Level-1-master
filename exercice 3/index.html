@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //a)
+    let randomColor = function() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + ", " + g + ", " + b + ")";
+    }
+
+    //b)
+    let createSquare = function(dimension="24px", padding="3px") {
+        let square = document.createElement("div");
+        square.style.backgroundColor = randomColor();
+        square.style.padding = padding;
+        square.style.display = "inline-block";
+        square.style.width = dimension;
+        square.style.height = dimension;
+        return square;
+    }
+
+    //c)
+    let multiSquares = function(number) {
+        for (let i = 0; i < number; i++) {
+            document.body.append(createSquare("24px"));
+        }
+    }
+
+    //d)
+    /*
+    let imbricateSquares = function(number) {
+        if (number <= 0) return;
+        let parent = document.createElement("div");
+        document.body.appendChild(parent);
+        let childs = []
+        for (let i = 0; i < number; i++) {
+            var child = createSquare(24+i*5+"px");
+            child.style.position = "absolute";
+            child.style.display = "flex";
+            child.style.justifyContent = "center";
+            child.style.alignItems = "center";
+            childs.push(child);
+            
+        }
+        for (let i = childs.length ; i > 0 ; i--) {
+            parent.appendChild(childs[i-1]);
+        }
+    }*/
+   //d) bis
+   
+   let imbricateSquares = function(number) {
+        if (number <= 0) return;
+        let div = document.body;
+        for (let i=0; i<=number-1; i++){
+            
+            child = createSquare("auto");
+            div.append(child);
+            div = child;
+        }
+    }
+
+    //e)
+    let changeColor = function() {
+        let squares = document.querySelectorAll("div");
+        squares.forEach(function(square) {
+            square.style.backgroundColor = randomColor();
+        });
+    }
+
+    //f)
+    /*
+    let intervalId = setInterval(changeColor, 200);
+
+    //g)
+    setInterval(function() {
+        let squares = document.querySelectorAll("div");
+        squares.forEach(function(square) {
+            square.style.backgroundColor = randomColor();
+        });
+    }, 200);
+*/
+
+
+    /*
+    Exercice 1 : Square events
+Pour cet exercice, vous devez repartir du précédent TD.
+a) On se concentre d’abord sur les carrés générés par la fonction multiSquare. Pour tous ces carrés, faites
+en sorte que si l’on clique sur l’un d’entre eux, la couleur du carré cliqué change.
+b) En exploitant le fait qu’un événement "remonte" vers la racine du document en phase de bubbling,
+faites comme pour la question a) sauf que l’on vous demande d’associer *une seule fois* un écouteur
+à un noeud du document (noeud que vous pourrez éventuellement ajouter).
+c) On se concentre à présent sur les carrés générés par la fonction imbricateSquare. Faites en sorte que si
+l’on clique sur l’un de ces carrés, celui-ci et tous ceux qui le contiennent voient leur padding augmenter
+de 30 pixels.
+d) Que modifier dans la question précédente pour que seul le carré cliqué augmente de padding (et plus
+ceux qui le contiennent). Proposer deux solutions.
+e) En utilisant un compteur ajouté en propriété de l’objet document, faites en sorte que si l’on clique sur
+un carré, sa marge augmente de 1, celle de son parent de 2, celle son grand père de 3 etc... Appuyez
+vous sur le sens de propagation d’un événement en phase bubbling.
+f) En modifiant très très peu de choses, faites en sorte d’inverser l’agrandissement des paddings. C’est à
+dire que le padding du premier carré augmente de 1, celui du second de 2... et ainsi de suite jusqu’à
+ce qu’on atteigne le carré cliqué.
+*/
+
+    //a)
+    multiSquares(100);
+    let handler_changeColor = function(ev){
+        ev.target.style.backgroundColor = randomColor();
+    }
+        document.body.addEventListener("click", handler_changeColor);
+    
+</script>
+</html>

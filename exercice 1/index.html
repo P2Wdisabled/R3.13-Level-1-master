@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <span>Javascrit</span>
+    <br>
+    <a href="https://github.com/P2Wdisabled">github</a>
+    <a href="https://biome.unilim.fr/">unilim</a>
+    <a href="https://biome.unilim2.fr/">unilim2</a>
+    <a href="https://biome.unilim3.fr/">unilim3</a>
+    <a href="https://biome.unilim4.fr/">unilim4</a>
+    <a href="https://biome.unilim5.fr/">unilim5</a>
+    <a href="https://biome.unilim6.fr/">unilim6</a>
+    <a href="https://biome.unilim7.fr/">unilim7</a>
+    <a href="https://biome.unilim8.fr/">unilim8</a>
+    <a href="https://biome.unilim9.fr/">unilim9</a>
+    <a href="https://biome.unilim70.fr/">unilim70</a>
+    <a href="https://biome.unilim11.fr/">unilim11</a>
+    <a href="https://biome.unilim12.fr/">unilim12</a>
+    <a href="https://biome.unilim13.fr/">unilim13</a>
+    <a href="https://biome.unilim14.fr/">unilim14</a>
+    <a href="https://biome.unilim15.fr/">unilim15</a>
+</body>
+<script>
+    let elt = document.querySelector('span')
+    elt.textContent += " c'est très bien"
+
+
+    //c)
+    //let links = document.querySelectorAll('a')
+    //let firslink = links[0].href
+    //links[0].href = links[1].href
+    //links[1].href = firslink
+
+
+    //d)
+    //let links = document.querySelectorAll('a')
+    //for (let i = 0; i < links.length; i++) {
+    //    let l1 = links[Math.floor(Math.random()*links.length)]
+    //    let l2 = links[Math.floor(Math.random()*links.length)]
+    //    let tmp = l1.href
+    //    l1.href = l2.href
+    //    l2.href = tmp
+    //    }
+
+
+
+    //e)
+    let links = document.querySelectorAll('a')
+    for (let link of links) {
+        link.remove()
+    }
+</script>
+</html>
+
+<!---b) can't read property-->
