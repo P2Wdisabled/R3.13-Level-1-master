@@ -12,17 +12,17 @@ Vanilla CSS
 
 ```css
 .btn {
-  background-color: #000;
-  color: #fff;
-  padding: 8px;
-  border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
 }
 ```
 
 Tailwind CSS
 
 ```html
-<a class="bg-black text-white p-2 rounded">Click me</a>
+<a class="rounded bg-black p-2 text-white">Click me</a>
 ```
 
 ## 1. Setup
@@ -33,8 +33,8 @@ Suivre les instructions de la documentation officielle pour installer TailwindCS
 
 REM :
 
-- **Playground** https://play.tailwindcss.com
-- **documentation** : https://tailwindcss.com
+-   **Playground** https://play.tailwindcss.com
+-   **documentation** : https://tailwindcss.com
 
 ## 2. Première carte Call to Action
 
@@ -58,16 +58,16 @@ Doc : [Configuration TailwindCSS](https://tailwindcss.com/docs/configuration)
 
 Dans le fichier `tailwind.config.js` ajouter:
 
-- les couleurs de texte:
-  --clr-text-base: 0 0% 100%
-  --clr-text-muted: 228 96% 89%
-  --clr-text-inverted: 243 75% 59%
+-   les couleurs de texte:
+    --clr-text-base: 0 0% 100%
+    --clr-text-muted: 228 96% 89%
+    --clr-text-inverted: 243 75% 59%
 
-- les couleurs de de background:
-  clr-fill: 245 58% 51%
-  clr-button-accent: 0 0% 100%
-  clr-button-accent-hover: 226 100% 97%
-  clr-button-muted: 239 84% 67%
+-   les couleurs de de background:
+    clr-fill: 245 58% 51%
+    clr-button-accent: 0 0% 100%
+    clr-button-accent-hover: 226 100% 97%
+    clr-button-muted: 239 84% 67%
 
 ## 5. Utilisation de variables CSS
 
