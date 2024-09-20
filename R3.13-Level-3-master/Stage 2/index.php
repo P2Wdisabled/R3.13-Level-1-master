@@ -9,7 +9,7 @@ $content = "";
 
 foreach ($products as $prod)
 {
-        $content = $content . $prod->render();
+        $content .= renderProduct($prod);
 }
 
 

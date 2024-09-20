@@ -4,8 +4,8 @@
     </div>
     <div class="product-info">
         
-            <h1 class="title">{{title}}</h1>
-            <h5 class="subtitle">{{subtitle}}</h5>
+            <h1 class="title">{{name}}</h1>
+            <h5 class="subtitle">{{Compatibility}}</h5>
             <p class="description">
             {{description}}      
             </p>

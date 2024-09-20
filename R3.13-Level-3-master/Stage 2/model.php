@@ -166,9 +166,9 @@ class Tshirt extends Product
         /**
          * Get the value of sizes
          */
-        public function getSizes(): array
+        public function getSizes(): string
         {
-                return $this->sizes;
+                return implode(" - ", $this->sizes);
         }
 
         /**

@@ -4,7 +4,7 @@
     </div>
     <div class="product-info">
         
-            <h1 class="title">{{title}}</h1>
+            <h1 class="title">{{name}}</h1>
             <p class="description">
                {{description}}<br><br>
                <span>Sizes: {{sizes}}   </span>
