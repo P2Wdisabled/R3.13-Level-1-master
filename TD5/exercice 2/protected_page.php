@@ -1,7 +1,23 @@
 <?php
 // protected_page.php
 
+session_start();
 
+// Vérifie si les données du formulaire ont été soumises
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['prenom']) && isset($_POST['nom'])) {
+        // Stocke les informations dans la session
+        $_SESSION['prenom'] = htmlspecialchars($_POST['prenom']);
+        $_SESSION['nom'] = htmlspecialchars($_POST['nom']);
+    }
+}
+
+// Vérifie si l'utilisateur est authentifié
+if (!isset($_SESSION['prenom']) || !isset($_SESSION['nom'])) {
+    // Redirige vers whoareyou.php si non authentifié
+    header("Location: whoareyou.php");
+    exit();
+}
 require_once 'auth.php';
 ?>
 

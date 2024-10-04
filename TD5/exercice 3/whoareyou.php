@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Veuillez vous identifier</h2>
-    <form action="protected_page.php" method="post">
+    <form action="index.php" method="post">
         <label for="prenom">Prénom :</label>
         <input type="text" id="prenom" name="prenom" required><br><br>
 

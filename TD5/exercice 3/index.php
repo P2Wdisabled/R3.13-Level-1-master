@@ -17,11 +17,6 @@ if (!isset($_SESSION['prenom']) || !isset($_SESSION['nom'])) {
     header("Location: whoareyou.php");
     exit();
 }
-if (isset($_SESSION['prenom']) && isset($_SESSION['nom'])) {
-    // Redirige vers whoareyou.php si non authentifié
-    header("Location: protected_page.php");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +43,7 @@ if (isset($_SESSION['prenom']) && isset($_SESSION['nom'])) {
 
     <h1>Bienvenue sur la page d'accueil</h1>
     <p>Contenu de la page d'accueil.</p>
-    <a href="anotherpage.php">Aller à une autre page</a>
+    <a href="page1.php">Aller à une autre page</a>
+    <a href="logout.php">Se déconnecter</a>
 </body>
 </html>

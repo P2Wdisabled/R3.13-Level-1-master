@@ -15,7 +15,7 @@ $compteur = $_SESSION['compteurs'][$current_page];
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page 1</title>
+    <title>Page 2</title>
     <style>
         .welcome {
             position: fixed;
@@ -34,7 +34,7 @@ $compteur = $_SESSION['compteurs'][$current_page];
 
     <h1>Bienvenue sur la Page 1</h1>
     <p>Vous avez visité cette page <?php echo $compteur; ?> fois durant cette session.</p>
-    <a href="page2.php">Aller à la Page 2</a>
+    <a href="page1.php">Aller à la Page 1</a>
     <a href="logout.php">Se déconnecter</a>
 </body>
 </html>
